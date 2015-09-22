@@ -104,13 +104,13 @@ namespace WPCordovaClassLib
                 this.maxScale = 2.0;// reset to default
                 if (metaDictionary.ContainsKey("maximum-scale"))
                 {
-                    this.maxScale = double.Parse(metaDictionary["maximum-scale"]);
+                    this.maxScale = double.Parse(metaDictionary["maximum-scale"], new System.Globalization.NumberFormatInfo());
                 }
 
                 this.minScale = 0.5;// reset to default
                 if (metaDictionary.ContainsKey("minimum-scale"))
                 {
-                    this.minScale = double.Parse(metaDictionary["minimum-scale"]);
+                    this.minScale = double.Parse(metaDictionary["minimum-scale"], new System.Globalization.NumberFormatInfo());
                 }
             }
             catch (Exception)
